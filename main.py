@@ -7,8 +7,6 @@ if root_dir not in sys.path:
 from src.detectpattern import DetectionPattern
 from src.gene_data import make_gene, make_gene_v2
 from IPython.display import clear_output
-import pandas as pd
-
 
 if __name__ == "__main__":
     comb = make_gene()

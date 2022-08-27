@@ -86,7 +86,7 @@ class DetectionPattern(object):
             self.print_pretty(result)
         return result
 
-    def _find_use_col(self, target_condition):
+    def _find_use_col(self, target_condition:dict):
         use_col = []
         for k, conds in target_condition.items():
             for cond in conds:
@@ -95,7 +95,7 @@ class DetectionPattern(object):
             use_col = list(set(use_col))
         return use_col
 
-    def fit(self, comb, cols, target_col, previous_condition=[]):
+    def fit(self, comb:pd.DataFrame, cols:list, target_col:str, previous_condition:list=[]):
         if len(cols) == 0:
             return print("Failed")
         result = make_gini_attributes(comb, cols=cols, target_col=target_col)
