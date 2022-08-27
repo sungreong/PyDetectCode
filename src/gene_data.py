@@ -65,3 +65,60 @@ def make_gene() :
     comb = pd.concat([comb,df],axis=0)
     comb = comb.reset_index(drop=True)
     return comb
+
+
+def make_gene_v2()     :
+    data1 = {
+    "age": [
+        "youth",
+        "youth",
+        "middle_age",
+        "senior",
+        "senior",
+        "senior",
+        "middle_age",
+        "youth",
+        "youth",
+        "senior",
+        "youth",
+        "middle_age",
+        "middle_age",
+        "senior",
+    ],
+    "income": [
+        "high",
+        "high",
+        "high",
+        "medium",
+        "low",
+        "low",
+        "low",
+        "medium",
+        "low",
+        "medium",
+        "medium",
+        "medium",
+        "high",
+        "medium",
+    ],
+    "student": ["no", "no", "no", "no", "yes", "yes", "yes", "no", "yes", "yes", "yes", "no", "yes", "no"],
+    "credit_rate": [
+        "fair",
+        "excellent",
+        "fair",
+        "fair",
+        "fair",
+        "excellent",
+        "excellent",
+        "fair",
+        "fair",
+        "fair",
+        "excellent",
+        "excellent",
+        "fair",
+        "excellent",
+    ],
+    "default": ["no", "no", "yes", "yes", "yes", "no", "yes", "no", "yes", "yes", "yes", "yes", "yes", "no"],
+    }
+    df1 = pd.DataFrame(data1, columns=data1.keys())
+    return df1

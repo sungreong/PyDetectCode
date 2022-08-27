@@ -8,7 +8,7 @@ import pandas as pd
 from src.metric import make_gini_attributes, get_min_giniattributes
 
 
-class SeperateCode(object):
+class DetectionPattern(object):
     def __init__(self):
         self._name = "sepcode"
 
